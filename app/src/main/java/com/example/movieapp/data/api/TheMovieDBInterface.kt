@@ -1,6 +1,8 @@
 package com.example.movieapp.data.api
 
 import com.example.movieapp.data.vo.MovieResponse
+import com.example.movieapp.data.vo.ShowDetails
+import com.example.movieapp.data.vo.ShowResponse
 import com.oxcoding.moviemvvm.data.vo.MovieDetails
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -14,6 +16,13 @@ interface TheMovieDBInterface {
 
     @GET("movie/popular")
     fun getPopularMovie(@Query("page") page: Int): Single<MovieResponse>
+
+
+    @GET("tv/{tv_id}")
+    fun getShowDetails(@Path("tv_id") id: Int): Single<ShowDetails>
+
+    @GET("tv/popular")
+    fun getPopularShow(@Query("") page: Int): Single<ShowResponse>
 
 
 }

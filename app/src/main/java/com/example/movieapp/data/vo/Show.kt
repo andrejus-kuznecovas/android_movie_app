@@ -1,13 +1,14 @@
 package com.example.movieapp.data.vo
 
-
 import com.google.gson.annotations.SerializedName
 
-data class Movie(
+data class Show(
     val id: Int,
+
     @SerializedName("poster_path")
     val posterPath: String,
-    @SerializedName("first_air_date")
+
+    @SerializedName("release_date")
     val releaseDate: String,
     val title: String
 )

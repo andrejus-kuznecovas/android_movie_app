@@ -19,7 +19,6 @@ class NetworkState(val status: Status, val msg: String) {
             LOADING = NetworkState(Status.RUNNING, "Running")
             ERROR = NetworkState(Status.FAILED, "Something went wrong!")
             END_OF_LIST = NetworkState(Status.FAILED, "The end of list has been reached")
-
         }
     }
 }
